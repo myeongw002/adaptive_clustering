@@ -12,6 +12,7 @@ lp = lg.LaserProjection()
 
 pc_pub = rospy.Publisher("/velodyne_points", PointCloud2, queue_size=1)
 
+
 def scan_cb(msg):
     # convert the message of type LaserScan to a PointCloud2
     pc2_msg = lp.projectLaser(msg)
